@@ -31,3 +31,12 @@ function startQuiz() {
 
     setInterval(updateTimer, 1000);
 }
+
+function updateTimer() {
+    timer--;
+    document.getElementById('timer').textContent = `Time: ${timer} seconds`;
+
+    if (timer <= 0) {
+        endQuiz();
+    }
+}
