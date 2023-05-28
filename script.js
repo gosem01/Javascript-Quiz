@@ -76,4 +76,19 @@ function nextQuestion() {
 }
 
 function endQuiz() {
+    clearInterval(updateTimer);
+    document.getElementById('quiz-container').innerHTML = `
+        <h1>Quiz Finished!</h1>
+        <p>Your score is: ${score} out of ${questions.length}</p>
+        <p>Your time remaining is: ${timer} seconds</p>
+        <input id="initials" type="text" placeholder="Enter your initials">
+        <button id="save-score">Save Score</button>
+        <button id="go-back">Go Back</button>
+    `;
+
+    document.getElementById('save-score').addEventListener('click', saveScore);
+    document.getElementById('go-back').addEventListener('click', goBack);
+}
+
+function endQuiz() {
 }
