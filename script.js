@@ -90,5 +90,15 @@ function endQuiz() {
     document.getElementById('go-back').addEventListener('click', goBack);
 }
 
-function endQuiz() {
+function saveScore() {
+    let initials = document.getElementById('initials').value;
+    let highscores = JSON.parse(localStorage.getItem('highscores')) || [];
+    let newScore = {
+        initials: initials,
+        score: score,
+        time: timer
+    };
+
+    highscores.push(newScore);
+    localStorage.setItem('highscores', JSON.stringify(highscores));
 }
