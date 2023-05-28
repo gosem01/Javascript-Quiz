@@ -1,12 +1,56 @@
 document.getElementById('start-button').addEventListener('click', startQuiz);
 
 let questions = [
-    {
-        question: "What will the code below output to the console: console.log(1 + +'2' + '3');",
-        options: ['123', '33', '15', '6'],
-        answer: '123'
-    }
-    // Add more questions here...
+        {
+            question: "What will the code below output to the console: console.log(1 + +'2' + '3');",
+            options: ['123', '33', '15', '6'],
+            answer: '123'
+        },
+        {
+            question: "What data type is NaN?",
+            options: ['Number', 'String', 'Object', 'Null'],
+            answer: 'Number'
+        },
+        {
+            question: "Which method removes the last element from an array and returns that element?",
+            options: ['pop()', 'push()', 'shift()', 'unshift()'],
+            answer: 'pop()'
+        },
+        {
+            question: "What does the '===' operator checks?",
+            options: ['Value and Data type', 'Only Value', 'If variable is undefined', 'None of the above'],
+            answer: 'Value and Data type'
+        },
+        {
+            question: "What will the following code output? console.log(typeof typeof 1);",
+            options: ['number', 'string', 'boolean', 'undefined'],
+            answer: 'string'
+        },
+        {
+            question: "What is the output of this expression: '2' + 2",
+            options: ['22', '4', 'error', 'none of the above'],
+            answer: '22'
+        },
+        {
+            question: "How do you write an IF statement in JavaScript?",
+            options: ['if i = 5 then', 'if i = 5', 'if (i == 5)', 'if i == 5 then'],
+            answer: 'if (i == 5)'
+        },
+        {
+            question: "What is the JavaScript syntax for printing values in Console?",
+            options: ['print(5)', 'console.log(5);', 'console.print(5);', 'print.console(5);'],
+            answer: 'console.log(5);'
+        },
+        {
+            question: "Which type of JavaScript language is ___ ? - Object-based",
+            options: ['Server side scripting', 'Client side scripting', 'Both', 'None of the above'],
+            answer: 'Both'
+        },
+        {
+            question: "What will the following code output? console.log('5' + 3);",
+            options: ['8', '53', 'undefined', 'error'],
+            answer: '53'
+        },
 ];
 
 let currentQuestion = 0;
