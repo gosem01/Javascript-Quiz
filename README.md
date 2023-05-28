@@ -1,5 +1,5 @@
 # Javascript-Quiz-Game
-Creating a portfolio site with HTML and CSS
+Creating a simple javascript quiz game using css, js, and html.
 
 ## Description
 
