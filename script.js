@@ -146,3 +146,25 @@ function saveScore() {
     highscores.push(newScore);
     localStorage.setItem('highscores', JSON.stringify(highscores));
 }
+
+function goBack() {
+    location.reload();
+}
+
+document.getElementById('show-highscores').addEventListener('click', showHighscores);
+
+function showHighscores() {
+    let highscores = JSON.parse(localStorage.getItem('highscores')) || [];
+
+    let highscoresHtml = highscores.map(score => 
+        `<p>${score.initials}: ${score.score} (Time remaining: ${score.time} seconds)</p>`
+    ).join('');
+
+    document.getElementById('quiz-container').innerHTML = `
+        <h1>Highscores</h1>
+        ${highscoresHtml}
+        <button id="go-back">Go Back</button>
+    `;
+
+    document.getElementById('go-back').addEventListener('click', goBack);
+}

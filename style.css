@@ -12,3 +12,9 @@ button {
     padding: 10px;
     margin-top: 20px;
 }
+
+#show-highscores {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
