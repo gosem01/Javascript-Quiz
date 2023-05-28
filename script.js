@@ -59,6 +59,20 @@ function selectOption(e) {
 }
 
 function nextQuestion() {
+    document.getElementById('quiz-container').innerHTML = `
+        <h1>JavaScript Quiz</h1>
+        <p id="timer">Time: ${timer} seconds</p>
+        <h2>${questions[currentQuestion].question}</h2>
+        <button class="option-button">${questions[currentQuestion].options[0]}</button>
+        <button class="option-button">${questions[currentQuestion].options[1]}</button>
+        <button class="option-button">${questions[currentQuestion].options[2]}</button>
+        <button class="option-button">${questions[currentQuestion].options[3]}</button>
+        <p id="feedback"></p>
+    `;
+
+    document.querySelectorAll('.option-button').forEach(option => {
+        option.addEventListener('click', selectOption);
+    });
 }
 
 function endQuiz() {
