@@ -40,3 +40,20 @@ function updateTimer() {
         endQuiz();
     }
 }
+
+function selectOption(e) {
+    if (e.target.textContent === questions[currentQuestion].answer) {
+        score++;
+        document.getElementById('feedback').textContent = 'Correct!';
+    } else {
+        document.getElementById('feedback').textContent = 'Incorrect!';
+    }
+
+    currentQuestion++;
+
+    if (currentQuestion < questions.length) {
+        nextQuestion();
+    } else {
+        endQuiz();
+    }
+}
