@@ -57,3 +57,9 @@ function selectOption(e) {
         endQuiz();
     }
 }
+
+function nextQuestion() {
+}
+
+function endQuiz() {
+}
